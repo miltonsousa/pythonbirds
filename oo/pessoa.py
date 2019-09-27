@@ -9,6 +9,13 @@ class Pessoa:
     def cumprinmentar(self):
         return f'Ola {id(self)}'
 
+    @staticmethod
+    def metodo_sonic():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
 
 
 if __name__ == '__main__':
@@ -32,3 +39,7 @@ if __name__ == '__main__':
      print(daniel.olhos)
      print(costa.olhos)
      print(id(Pessoa.olhos)), id(daniel.olhos), id(costa.olhos)
+     print(Pessoa.metodo_sonic(), daniel.metodo_sonic())
+     print(Pessoa.nome_e_atributos_de_classe(), daniel.nome_e_atributos_de_classe())
+
+
